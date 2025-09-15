@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "dev": "node app.js",
+    "api": "node app.js",
     "test": "cross-env NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --watchAll --no-cache --detectOpenHandles"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
   "devDependencies": {
     "cross-env": "^10.0.0",
     "jest": "^30.1.1",
+    "mongodb-memory-server": "^10.2.0",
     "supertest": "^7.1.4"
   },
   "dependencies": {

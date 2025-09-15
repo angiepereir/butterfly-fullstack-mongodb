@@ -24,13 +24,13 @@ const butterflySchema = new mongoose.Schema({
     required: true,
     trim: true
   },
-  activity: { 
+   activity: { 
     type: Number, 
     required: false,
-    min: 0,
-    max: 255
+    enum: [0, 1],          // <-- asegura 0/1
+    default: 1
   },
-  status: { 
+   status: { 
     type: Number, 
     required: false,
     min: 0,
@@ -61,10 +61,24 @@ const butterflySchema = new mongoose.Schema({
     }
   }
 }, {
-  timestamps: false, // Si quieres mantener sin timestamps como en Sequelize
-  // timestamps: true, // Si quieres createdAt y updatedAt automáticos
-  versionKey: false // Elimina el campo __v
-});
+    timestamps: false,
+    versionKey: false,
+    toJSON: {
+      virtuals: true,
+      transform: (_doc, ret) => {
+        // 🔑 Lo que espera el front:
+        if (ret.activity !== undefined && ret.activity !== null) {
+          ret.activity = ret.activity === 1 ? "1" : "0";
+        }
+        if (ret.status !== undefined && ret.status !== null) {
+          ret.status = String(ret.status);
+        }
+        return ret;
+      },
+    },
+  }
+);
+
 
 // Índices para mejorar rendimiento (opcional)
 butterflySchema.index({ name: 1 });

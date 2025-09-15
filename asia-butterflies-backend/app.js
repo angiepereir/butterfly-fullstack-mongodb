@@ -4,7 +4,7 @@ import connectDB from './database/db_connection.js';
 import butterflyRoutes from './routes/butterflyRoutes.js';
 import cors from 'cors';
 
-const app = express();
+export const app = express();
 app.use(cors());
 app.use(express.json());
 
