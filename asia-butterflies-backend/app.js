@@ -17,6 +17,6 @@ app.use('/butterflies', butterflyRoutes); // <-- monta el router
 
 // 3) Listen
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, () =>
+export const server = app.listen(PORT, () =>
   console.log(`✅ Server on http://localhost:${PORT}/butterflies`)
 );
