@@ -33,6 +33,7 @@ butterfly-fullstack-mongodb/
 
 📦 Clonado
 git clone https://github.com/angiepereir/butterfly-fullstack-mongodb.git
+
 cd butterfly-fullstack-mongodb
 
 🗄️ Backend — Configuración & ejecución
@@ -47,7 +48,7 @@ MONGODB_URI=mongodb+srv://USUARIO:PASS@CLUSTER/asia_butterflies?retryWrites=true
 # BD de tests (cuando NODE_ENV=test)
 MONGODB_URI_TEST=mongodb+srv://USUARIO:PASS@CLUSTER/asia_butterflies_test?retryWrites=true&w=majority
 
-# (opcionales si tu URI no incluye el nombre)
+
 # DB_NAME=asia_butterflies
 # DB_NAME_TEST=asia_butterflies_test
 
@@ -55,17 +56,14 @@ MONGODB_URI_TEST=mongodb+srv://USUARIO:PASS@CLUSTER/asia_butterflies_test?retryW
 Instala dependencias y levanta la API:
 
 cd backend
-npm install
-# recomendado: forzar entorno dev para asegurar MONGODB_URI (no la de test)
-npx cross-env NODE_ENV=development node app.js
-# o, si tienes script:
+
+# npm install
+
 # npm run dev
 
 
 
 Recurso principal: http://localhost:8000/butterflies
-
-Nota: si ves datos de test, revisa que estés en NODE_ENV=development y que el log de conexión apunte a asia_butterflies (no a asia_butterflies_test).
 
 🖼 Frontend — Configuración & ejecución
 
@@ -73,5 +71,20 @@ Nota: si ves datos de test, revisa que estés en NODE_ENV=development y que el l
 Instala y arranca Vite:
 
 cd ../frontend
-npm install
-npm run dev
+
+# npm install
+
+# npm run dev
+
+
+REPOS:
+# MARIANA MORENO: (https://github.com/MarianaMH1195/fullstack-butterflies-SQL)
+
+# LARYSA AMBARTSUMIAN: (https://github.com/ambalari/asian-butterflies-mongodb-2)
+
+# LARYSA AMBARTSUMIAN: (https://github.com/ambalari/butterflies-fullstack-)
+
+# LARYSA AMBARTSUMIAN: (https://github.com/ambalari/butterflies-fullstack-)
+
+
+
