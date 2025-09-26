@@ -78,13 +78,11 @@ cd ../frontend
 
 
 REPOS:
-# MARIANA MORENO: (https://github.com/MarianaMH1195/fullstack-butterflies-SQL)
+# MARICARMEN TAJUELO: (https://github.com/CarmenTajuelo/asian-butterflies-fullstack-mongodb)
 
 # LARYSA AMBARTSUMIAN: (https://github.com/ambalari/asian-butterflies-mongodb-2)
 
-# LARYSA AMBARTSUMIAN: (https://github.com/ambalari/butterflies-fullstack-)
 
-# LARYSA AMBARTSUMIAN: (https://github.com/ambalari/butterflies-fullstack-)
 
 
 
